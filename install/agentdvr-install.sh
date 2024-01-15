@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2023 tteck
+# Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
 # https://github.com/tteck/Proxmox/raw/main/LICENSE
@@ -22,6 +22,7 @@ $STD apt-get install -y apt-transport-https
 $STD apt-get install -y alsa-utils
 $STD apt-get install -y libxext-dev
 $STD apt-get install -y fontconfig
+$STD apt-get install -y libva-drm2
 msg_ok "Installed Dependencies"
 
 msg_info "Installing AgentDVR"

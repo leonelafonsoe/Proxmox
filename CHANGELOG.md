@@ -1,9 +1,115 @@
-<!-- <p align="center"><a href="https://helper-scripts" rel="noreferrer" target="_blank"><img src="https://github-readme-stats.vercel.app/api?username=tteck&custom_title=Proxmox&nbsp;VE&nbsp;Helper&nbsp;Scripts&theme=transparent&ring_color=00b100&hide=issues,contribs&hide_border=true&card_width=550px&include_all_commits=true&rank_icon=percentile&show_icons=true&show=prs_merged,prs_merged_percentage"></a></p> -->
+<div align="center">
+<img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
+</div>
+<h1 align="center">Change Log</h1>
 
-# Change Log
-**All notable changes to this project will be documented in this file.**<br>
+<h3 align="center">All notable changes to this project will be documented in this file.</h3>
 
 - All LXC instances created using this repository come pre-installed with Midnight Commander, which is a command-line tool (`mc`) that offers a user-friendly file and directory management interface for the terminal environment.
+
+## 2024-01-12
+
+### Changed
+
+- **Apt-Cacher-NG LXC**
+  - NEW Script
+- **New Feature**
+  - The option to utilize Apt-Cacher-NG (Advanced settings) when creating LXCs. The added functionality is expected to decrease bandwidth usage and expedite package installation and updates. https://github.com/tteck/Proxmox/discussions/2332
+
+## 2024-01-09
+
+### Changed
+
+- **Verbose mode**
+  - Only entries with `$STD` will be shown
+
+## 2024-01-07
+
+### Changed
+
+- **Stirling-PDF LXC**
+  - NEW Script
+- **SFTPGo LXC**
+  - NEW Script
+
+## 2024-01-04
+
+### Changed
+
+- **CommaFeed LXC**
+  - NEW Script
+
+## 2024-01-03
+
+### Changed
+
+- **Sonarr LXC**
+  - Breaking Change
+  - Complete recode
+  - https://github.com/tteck/Proxmox/discussions/1738#discussioncomment-8005107
+
+## 2024-01-01
+
+### Changed
+
+- **Gotify LXC**
+  - NEW Script
+
+## 2023-12-19
+
+### Changed
+
+- **Proxmox VE Netdata**
+  - NEW Script
+
+## 2023-12-10
+
+### Changed
+
+- **Homarr LXC**
+  - Removed, again.
+
+## 2023-12-02
+
+### Changed
+
+- **Runtipi LXC**
+  - NEW Script
+
+## 2023-12-01
+
+### Changed
+
+- **Mikrotik RouterOS VM**
+  - Now Mikrotik RouterOS CHR VM
+  - code refactoring
+  - update to CHR
+  - thanks to @NiccyB
+- **Channels DVR Server LXC**
+  - NEW Script
+
+## 2023-11-19
+
+### Changed
+
+- **Dockge LXC**
+  - NEW Script
+
+## 2023-11-18
+
+### Changed
+
+- **Ubuntu 22.04 VM**
+  - NEW Script
+
+## 2023-11-14
+
+### Changed
+
+- **TurnKey Nextcloud VM**
+  - NEW Script
+- **TurnKey ownCloud VM**
+  - NEW Script
 
 ## 2023-11-11
 

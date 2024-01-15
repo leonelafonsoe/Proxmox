@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2023 tteck
+# Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
 # https://github.com/tteck/Proxmox/raw/main/LICENSE
@@ -44,10 +44,11 @@ if [[ "$CTTYPE" == "0" ]]; then
     va-driver-all \
     ocl-icd-libopencl1 \
     intel-opencl-icd
-
-  /bin/chgrp video /dev/dri
-  /bin/chmod 755 /dev/dri
-  /bin/chmod 660 /dev/dri/*
+  chgrp video /dev/dri
+  chmod 755 /dev/dri
+  chmod 660 /dev/dri/*
+  $STD adduser $(id -u -n) video
+  $STD adduser $(id -u -n) render
   msg_ok "Set Up Hardware Acceleration"
 fi
 msg_info "Installing GStreamer (Patience)"
@@ -70,10 +71,11 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dea
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" >/etc/apt/sources.list.d/nodesource.list
 msg_ok "Set up Node.js Repository"
 
-msg_info "Installing Node.js"
+msg_info "Installing Node.js/npm"
 $STD apt-get update
 $STD apt-get install -y nodejs
-msg_ok "Installed Node.js"
+$STD apt-get install -y npm
+msg_ok "Installed Node.js/npm"
 
 msg_info "Updating Python3"
 $STD apt-get install -y \

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2023 tteck
+# Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
 # https://github.com/tteck/Proxmox/raw/main/LICENSE
@@ -29,6 +29,7 @@ $STD apt-get install -y \
 msg_ok "Updated Python3"
 
 msg_info "Installing ESPHome"
+mkdir /root/config
 $STD pip install esphome tornado esptool
 msg_ok "Installed ESPHome"
 
@@ -39,7 +40,7 @@ Description=ESPHome Dashboard
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/esphome dashboard /root/.config/
+ExecStart=/usr/local/bin/esphome dashboard /root/config/
 Restart=always
 User=root
 

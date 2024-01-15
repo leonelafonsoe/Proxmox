@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2023 tteck
+# Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
 # https://github.com/tteck/Proxmox/raw/main/LICENSE
@@ -24,6 +24,7 @@ $STD apt-get install -y php
 $STD apt-get install -y php-sqlite3
 $STD apt-get install -y php-zip
 $STD apt-get install -y php-xml
+$STD apt-get install -y php-intl
 msg_ok "Installed PHP"
 
 RELEASE=$(curl -sX GET "https://api.github.com/repos/linuxserver/Heimdall/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]')
