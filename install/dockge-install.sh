@@ -53,7 +53,7 @@ if [[ ${prompt,,} =~ ^(y|yes)$ ]]; then
   mkdir -p /opt/stacks/immich
   wget -q -O /opt/stacks/immich/compose.yaml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
   wget -q -O /opt/stacks/immich/.env https://github.com/immich-app/immich/releases/latest/download/example.env
-  wget -q -O /opt/stacks/immich/hwaccel.yml https://github.com/immich-app/immich/releases/latest/download/hwaccel.yml
+  #wget -q -O /opt/stacks/immich/hwaccel.ml.yml https://github.com/immich-app/immich/releases/latest/download/hwaccel.ml.yml
   msg_ok "Added Immich compose.yaml"
 fi
 
@@ -62,19 +62,18 @@ if [[ ${prompt,,} =~ ^(y|yes)$ ]]; then
   msg_info "Adding Home Assistant compose.yaml"
   mkdir -p /opt/stacks/homeassistant
   cat <<EOF >/opt/stacks/homeassistant/compose.yaml
-version: "3.3"
+version: "3"
 services:
-  home-assistant:
+  homeassistant:
     container_name: homeassistant
-    privileged: true
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /dev:/dev
-      - /etc/localtime:/etc/localtime:ro
-      - ./config:/config
-    network_mode: host
     image: ghcr.io/home-assistant/home-assistant:stable
+    volumes:
+      - ./config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
 EOF
 msg_ok "Added Home Assistant compose.yaml"
 fi
@@ -83,6 +82,6 @@ motd_ssh
 customize
 
 msg_info "Cleaning up"
-$STD apt-get autoremove
-$STD apt-get autoclean
+$STD apt-get -y autoremove
+$STD apt-get -y autoclean
 msg_ok "Cleaned"

@@ -23,13 +23,13 @@ var_disk="8"
 var_cpu="2"
 var_ram="2048"
 var_os="ubuntu"
-var_version="20.04"
+var_version="22.04"
 variables
 color
 catch_errors
 
 function default_settings() {
-  CT_TYPE="0"
+  CT_TYPE="1"
   PW=""
   CT_ID=$NEXTID
   HN=$NSAPP

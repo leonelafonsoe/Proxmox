@@ -19,12 +19,14 @@ $STD apt-get -y install \
   mc \
   curl \
   apt-utils \
+  avahi-utils \
   lighttpd \
   sqlite3 \
   mmdb-bin \
   arp-scan \
   dnsutils \
   net-tools \
+  nbtscan \
   libwww-perl \
   nmap \
   zip \
@@ -94,6 +96,6 @@ motd_ssh
 customize
 
 msg_info "Cleaning up"
-$STD apt-get autoremove
-$STD apt-get autoclean
+$STD apt-get -y autoremove
+$STD apt-get -y autoclean
 msg_ok "Cleaned"

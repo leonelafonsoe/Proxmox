@@ -33,6 +33,7 @@ $STD apt-get install -y nodejs
 msg_ok "Installed Node.js"
 
 msg_info "Installing n8n (Patience)"
+$STD npm install --global patch-package
 $STD npm install --global n8n
 msg_ok "Installed n8n"
 
@@ -43,6 +44,7 @@ Description=n8n
 
 [Service]
 Type=simple
+Environment="N8N_SECURE_COOKIE=false"
 ExecStart=n8n start
 [Install]
 WantedBy=multi-user.target
@@ -54,6 +56,6 @@ motd_ssh
 customize
 
 msg_info "Cleaning up"
-$STD apt-get autoremove
-$STD apt-get autoclean
+$STD apt-get -y autoremove
+$STD apt-get -y autoclean
 msg_ok "Cleaned"

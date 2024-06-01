@@ -20,11 +20,11 @@ EOF
 header_info
 echo -e "Loading..."
 APP="Alpine-Grafana"
-var_disk="0.5"
+var_disk="1"
 var_cpu="1"
 var_ram="256"
 var_os="alpine"
-var_version="3.18"
+var_version="3.19"
 variables
 color
 catch_errors

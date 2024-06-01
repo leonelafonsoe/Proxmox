@@ -22,6 +22,7 @@ $STD apt-get install -y \
   build-essential \
   dumb-init \
   gconf-service \
+  libjpeg-dev \
   libatk-bridge2.0-0 \
   libasound2 \
   libatk1.0-0 \
@@ -156,6 +157,6 @@ motd_ssh
 customize
 
 msg_info "Cleaning up"
-$STD apt-get autoremove
-$STD apt-get autoclean
+$STD apt-get -y autoremove
+$STD apt-get -y autoclean
 msg_ok "Cleaned"

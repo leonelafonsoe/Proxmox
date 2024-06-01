@@ -1,9 +1,13 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
+  <a href="#">
+    <img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
+ </a>
 </div>
 <h2 align="center">User Submitted Guides </h2>
 
 <sub> In order to contribute a guide on installing with Proxmox VE Helper Scripts, you should open a pull request that adds the guide to the `USER_SUBMITTED_GUIDES.md` file. </sub>
+
+[Proxmox Automation with Proxmox Helper Scripts!](https://www.youtube.com/watch?v=kcpu4z5eSEU)
 
 [Installing Home Assistant OS using Proxmox 8](https://community.home-assistant.io/t/installing-home-assistant-os-using-proxmox-8/201835)
 
@@ -32,3 +36,5 @@
 [iGPU Transcoding In Proxmox with Jellyfin](https://www.youtube.com/watch?v=XAa_qpNmzZs)
 
 [Proxmox + NetData](<https://dbt3ch.com/books/proxmox-netdata-for-better-insights-and-notifications/page/proxmox-netdata-for-better-insights-and-notifications>)
+
+[Proxmox Homelab Series](<https://blog.kye.dev/proxmox-series>)

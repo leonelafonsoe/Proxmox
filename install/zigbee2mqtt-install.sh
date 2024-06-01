@@ -50,7 +50,9 @@ fi
 msg_info "Installing Zigbee2MQTT"
 cd /opt/zigbee2mqtt
 if [[ $DEV == "y" ]]; then
+$STD git fetch origin dev:dev
 $STD git checkout dev
+$STD git pull
 fi
 $STD npm ci
 msg_ok "Installed Zigbee2MQTT"
@@ -77,6 +79,6 @@ motd_ssh
 customize
 
 msg_info "Cleaning up"
-$STD apt-get autoremove
-$STD apt-get autoclean
+$STD apt-get -y autoremove
+$STD apt-get -y autoclean
 msg_ok "Cleaned"

@@ -1,9 +1,12 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
+  <a href="#">
+    <img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
+ </a>
 </div>
 <h1 align="center">Proxmox VE Helper-Scripts</h1>
 
 <p align="center">
+  <a href="https://helper-scripts.com/terms-of-use">Terms of Use</a> | 
   <a href="https://helper-scripts.com/">Website</a> | 
   <a href="https://github.com/tteck/Proxmox/blob/main/.github/CONTRIBUTING.md">Contribute</a> |
   <a href="https://github.com/tteck/Proxmox/blob/main/USER_SUBMITTED_GUIDES.md">Guides</a> |
